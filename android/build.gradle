@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        maven{
+        name="GitHubPackages"
+        url = uri("https://maven.pkg.github.com/vivekshindhe/TestingAndroidStandard")
+        credentials{
+            username = "vivekshindhe"
+            password = "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"
+        }
+    }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.google.gms:google-services:4.3.5'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven{
+        name="GitHubPackages"
+        url = uri("https://maven.pkg.github.com/vivekshindhe/TestingAndroidStandard")
+        credentials{
+            username = "vivekshindhe"
+            password = "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"
+        }
+    }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
